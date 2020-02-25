@@ -1,0 +1,40 @@
+﻿<Page x:Class="Alytalo.Sauna"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Alytalo"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Sauna">
+
+    <Grid>
+        <Grid x:Name="gridSetSauna" HorizontalAlignment="Left" Height="197" Margin="65,52,0,0" VerticalAlignment="Top" Width="176" Background="#FF142055">
+            <Image x:Name="imgSwitchOn" HorizontalAlignment="Left" Height="88" Margin="44,36,0,0" VerticalAlignment="Top" Width="87" Source="assets/on.png" MouseLeftButtonDown="ImgSwitchOn_MouseLeftButtonDown"/>
+            <Image x:Name="imgSwitchOff" HorizontalAlignment="Left" Height="88" Margin="44,36,0,0" VerticalAlignment="Top" Width="87" Source="assets/off.png" MouseLeftButtonDown="ImgSwitchOff_MouseLeftButtonDown"/>
+            <StackPanel x:Name="panelSauna" Height="31" VerticalAlignment="Top" Width="176">
+                <StackPanel.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF000E11" Offset="0.17"/>
+                        <GradientStop Color="#FF17456A" Offset="1"/>
+                    </LinearGradientBrush>
+                </StackPanel.Background>
+                <Label x:Name="lblSauna" Content="Sauna" Height="35" FontSize="16" FontWeight="Bold" Foreground="White" Margin="58,0,49,0"/>
+            </StackPanel>
+            <Label x:Name="lblState" Content="" HorizontalAlignment="Left" Margin="50,135,0,0" VerticalAlignment="Top" Width="86" Foreground="#FFFDFDFD"/>
+        </Grid>
+        <Grid x:Name="gridSaunaState" HorizontalAlignment="Left" Height="197" Margin="291,52,0,0" VerticalAlignment="Top" Width="176" Background="#FF142055">
+            <TextBox x:Name="txtSaunaTemp" HorizontalAlignment="Left" Height="115" Margin="28,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="123" FontSize="72" TextAlignment="Center" Foreground="White" Background="#FF142055" BorderBrush="#FF142055"/>
+            <StackPanel x:Name="panelSaunanLampotila" Height="31" VerticalAlignment="Top" Width="176">
+                <StackPanel.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF000E11" Offset="0.17"/>
+                        <GradientStop Color="#FF17456A" Offset="1"/>
+                    </LinearGradientBrush>
+                </StackPanel.Background>
+                <Label x:Name="lblSauna1" Content="Saunan lämpötila" Height="35" FontSize="16" FontWeight="Bold" Foreground="White" Margin="19,0,10,0"/>
+            </StackPanel>
+        </Grid>
+
+    </Grid>
+</Page>

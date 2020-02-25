@@ -1,0 +1,52 @@
+﻿<Page x:Class="Alytalo.Valaistus"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Alytalo"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Valaistus">
+
+    <Grid>
+        <Grid x:Name="gridOlohuone" HorizontalAlignment="Left" Height="197" Margin="65,52,0,0" VerticalAlignment="Top" Width="176" Background="#FF142055">
+            <StackPanel x:Name="sliderPanelOlohuone" HorizontalAlignment="Left" Height="32" Margin="10,155,0,0" VerticalAlignment="Top" Width="156">
+                <Slider x:Name="sliderOlohuone" VerticalAlignment="Top" Minimum="0" Maximum="100" TickFrequency="1" IsSnapToTickEnabled="True" ValueChanged="SliderOlohuone_ValueChanged"/>
+            </StackPanel>
+            <TextBox x:Name="txtOlohuoneSliderValue" HorizontalAlignment="Left" Height="23" Margin="91,132,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" Background="{x:Null}" FontSize="14" RenderTransformOrigin="-1.9,0.522" BorderBrush="{x:Null}" Foreground="White" IsReadOnly="True"/>
+            <Image x:Name="imgOlohuoneOn" HorizontalAlignment="Left" Height="88" Margin="44,36,0,0" VerticalAlignment="Top" Width="87" Source="assets/on.png" Stretch="UniformToFill" MouseLeftButtonDown="ImgOlohuoneOn_MouseLeftButtonDown"/>
+            <Label x:Name="lblProsenttiOlohuone" Content="%" HorizontalAlignment="Left" Margin="119,129,0,0" VerticalAlignment="Top" Width="25" Background="{x:Null}" Foreground="White" FontSize="14"/>
+            <Label x:Name="lblHimmennysOlohuone" Content="Kirkkausaste" HorizontalAlignment="Left" Margin="6,126,0,0" VerticalAlignment="Top" Width="86" Foreground="White" FontSize="14"/>
+            <Image x:Name="imgOlohuoneOff" HorizontalAlignment="Left" Height="88" Margin="44,36,0,0" VerticalAlignment="Top" Width="87" Source="assets/off.png" Stretch="UniformToFill" MouseLeftButtonDown="ImgOlohuoneOff_MouseLeftButtonDown"/>
+            <StackPanel x:Name="panelOlohuone" Margin="0,0,0,166">
+                <StackPanel.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF000E11" Offset="0.17"/>
+                        <GradientStop Color="#FF17456A" Offset="1"/>
+                    </LinearGradientBrush>
+                </StackPanel.Background>
+                <Label x:Name="lblOlohuone" Content="Olohuone" FontSize="16" Foreground="White" Width="85" FontWeight="Bold" Margin="47,0,44,0"/>
+            </StackPanel>
+        </Grid>
+        <Grid x:Name="gridKeittio" HorizontalAlignment="Left" Height="197" Margin="291,52,0,0" VerticalAlignment="Top" Width="176" Background="#FF142055">
+            <StackPanel x:Name="sliderPanelKeittio" HorizontalAlignment="Left" Height="32" Margin="10,155,0,0" VerticalAlignment="Top" Width="156">
+                <Slider x:Name="sliderKeittio" VerticalAlignment="Top" Minimum="0" Maximum="100" TickFrequency="1" IsSnapToTickEnabled="True" ValueChanged="SliderKeittio_ValueChanged"/>
+            </StackPanel>
+            <TextBox x:Name="txtKeittioSliderValue" HorizontalAlignment="Left" Height="23" Margin="96,130,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" Background="{x:Null}" FontSize="14" BorderBrush="{x:Null}" Foreground="White" IsReadOnly="True"/>
+            <Image x:Name="imgKeittioOn" HorizontalAlignment="Left" Height="88" Margin="43,34,0,0" VerticalAlignment="Top" Width="87" Source="assets/on.png" Stretch="UniformToFill" MouseLeftButtonDown="ImgKeittioOn_MouseLeftButtonDown"/>
+            <Label x:Name="lblHimmennysKeittio" Content="Kirkkausaste" HorizontalAlignment="Left" Margin="6,125,0,0" VerticalAlignment="Top" Width="90" FontSize="14" Foreground="#FFFBFBFB"/>
+            <Label x:Name="lblProsenttiKeittio" Content="%" HorizontalAlignment="Left" Margin="123,127,0,0" VerticalAlignment="Top" Width="25" Background="{x:Null}" Foreground="White" FontSize="14"/>
+            <Image x:Name="imgKeittioOff" HorizontalAlignment="Left" Height="88" Margin="43,34,0,0" VerticalAlignment="Top" Width="87" Source="assets/off.png" Stretch="UniformToFill" MouseLeftButtonDown="ImgKeittioOff_MouseLeftButtonDown"/>
+            <StackPanel x:Name="panelKeittio" Margin="0,0,0,166">
+                <StackPanel.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF000E11" Offset="0.17"/>
+                        <GradientStop Color="#FF17456A" Offset="1"/>
+                    </LinearGradientBrush>
+                </StackPanel.Background>
+                <Label x:Name="lblKeittio" Content="Keittiö" FontSize="16" FontWeight="Bold" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </StackPanel>
+        </Grid>
+
+    </Grid>
+</Page>

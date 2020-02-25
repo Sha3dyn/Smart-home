@@ -1,0 +1,40 @@
+﻿<Page x:Class="Alytalo.lampotila"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Alytalo"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Lampotila">
+
+    <Grid>
+        <Grid x:Name="gridSetTemp" HorizontalAlignment="Left" Height="197" Margin="65,52,0,0" VerticalAlignment="Top" Width="176" Background="#FF142055">
+            <TextBox x:Name="txtSetTemp" HorizontalAlignment="Left" Height="23" Margin="32,89,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+            <Button x:Name="btnSetTemp" Content="Aseta" HorizontalAlignment="Left" Margin="32,127,0,0" VerticalAlignment="Top" Width="120" Click="BtnSetTemp_Click"/>
+            <Label x:Name="lblSetTemp" Content="Aseta lämpötila:" Margin="32,58,24,0" VerticalAlignment="Top" Foreground="#FFFBFBFB"/>
+            <StackPanel x:Name="panelHuonelampotila" Height="31" VerticalAlignment="Top">
+                <StackPanel.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF000E11" Offset="0.17"/>
+                        <GradientStop Color="#FF17456A" Offset="1"/>
+                    </LinearGradientBrush>
+                </StackPanel.Background>
+                <Label x:Name="lblTavoitelampotila" Content="Tavoitelämpötila" Height="35" FontSize="16" Foreground="White" FontWeight="Bold" Margin="23,0,13,0" VerticalAlignment="Center"/>
+            </StackPanel>
+        </Grid>
+        <Grid x:Name="gridCurrentTemp" HorizontalAlignment="Left" Height="197" Margin="291,52,0,0" VerticalAlignment="Top" Width="176" Background="#FF142055">
+            <TextBox x:Name="txtCurrentTemp" HorizontalAlignment="Center" Height="130" Margin="10,49,10,18" TextWrapping="Wrap" VerticalAlignment="Center" Width="156" FontSize="72" TextAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White"/>
+            <StackPanel x:Name="panelTavoitelampotila" Height="31" VerticalAlignment="Top">
+                <StackPanel.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF000E11" Offset="0.17"/>
+                        <GradientStop Color="#FF17456A" Offset="1"/>
+                    </LinearGradientBrush>
+                </StackPanel.Background>
+                <Label x:Name="lblHuonelampotila" Content="Huonelämpötila" Height="35" FontSize="16" Foreground="White" FontWeight="Bold" Margin="23,0,13,0" VerticalAlignment="Center"/>
+            </StackPanel>
+        </Grid>
+
+    </Grid>
+</Page>
