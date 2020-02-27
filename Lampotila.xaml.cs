@@ -21,35 +21,21 @@ namespace Alytalo
    
     public partial class lampotila : Page
     {
-        public static int Temperature { get; set; }
-        public static bool ValueChanged { get; set; }
+
 
         public lampotila()
         {
             InitializeComponent();
-            SetStarterValues();  
+            Thermostat.SetTemperature(txtCurrentTemp, false);
         }
 
-        // Set default room temperature at start
-        public void SetStarterValues()
-        {
-            int startTemp = 19;
-
-            if(!ValueChanged)
-            {
-                Temperature = startTemp;
-            }
-
-            txtCurrentTemp.Text = Temperature.ToString();
-        }
-
-        // Set new room temperature
         private void BtnSetTemp_Click(object sender, RoutedEventArgs e)
         {
             txtCurrentTemp.Text = txtSetTemp.Text;
-            Temperature = Int32.Parse(txtCurrentTemp.Text);
+            Thermostat.Temperature = Int32.Parse(txtCurrentTemp.Text);
             txtSetTemp.Clear();
-            ValueChanged = true;
+            Thermostat.ValueChanged = true;
         }
+
     }
 }

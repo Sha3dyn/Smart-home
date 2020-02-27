@@ -58,9 +58,12 @@
     <Compile Include="Lampotila.xaml.cs">
       <DependentUpon>Lampotila.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Lights.cs" />
     <Compile Include="Sauna.xaml.cs">
       <DependentUpon>Sauna.xaml</DependentUpon>
     </Compile>
+    <Compile Include="SaunaClass.cs" />
+    <Compile Include="Thermostat.cs" />
     <Compile Include="Valaistus.xaml.cs">
       <DependentUpon>Valaistus.xaml</DependentUpon>
     </Compile>

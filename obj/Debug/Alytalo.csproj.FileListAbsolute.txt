@@ -21,3 +21,26 @@ D:\Opiskelu\Koulu\Careeria\Olio-ohjelmointi ja WPF-sovellukset\Alytalo\obj\Debug
 D:\Opiskelu\Koulu\Careeria\Olio-ohjelmointi ja WPF-sovellukset\Alytalo\obj\Debug\Lampotila.baml
 D:\Opiskelu\Koulu\Careeria\Olio-ohjelmointi ja WPF-sovellukset\Alytalo\obj\Debug\Sauna.baml
 D:\Opiskelu\Koulu\Careeria\Olio-ohjelmointi ja WPF-sovellukset\Alytalo\obj\Debug\Valaistus.baml
+D:\Projektit\C# Projektit\Alytalo\bin\Debug\Alytalo.exe.config
+D:\Projektit\C# Projektit\Alytalo\bin\Debug\Alytalo.exe
+D:\Projektit\C# Projektit\Alytalo\bin\Debug\Alytalo.pdb
+D:\Projektit\C# Projektit\Alytalo\obj\Debug\Alytalo.csprojAssemblyReference.cache
+D:\Projektit\C# Projektit\Alytalo\obj\Debug\Etusivu.g.cs
+D:\Projektit\C# Projektit\Alytalo\obj\Debug\Lampotila.g.cs
+D:\Projektit\C# Projektit\Alytalo\obj\Debug\MainWindow.g.cs
+D:\Projektit\C# Projektit\Alytalo\obj\Debug\Sauna.g.cs
+D:\Projektit\C# Projektit\Alytalo\obj\Debug\Valaistus.g.cs
+D:\Projektit\C# Projektit\Alytalo\obj\Debug\App.g.cs
+D:\Projektit\C# Projektit\Alytalo\obj\Debug\Alytalo_MarkupCompile.cache
+D:\Projektit\C# Projektit\Alytalo\obj\Debug\Alytalo_MarkupCompile.lref
+D:\Projektit\C# Projektit\Alytalo\obj\Debug\Etusivu.baml
+D:\Projektit\C# Projektit\Alytalo\obj\Debug\Lampotila.baml
+D:\Projektit\C# Projektit\Alytalo\obj\Debug\MainWindow.baml
+D:\Projektit\C# Projektit\Alytalo\obj\Debug\Sauna.baml
+D:\Projektit\C# Projektit\Alytalo\obj\Debug\Valaistus.baml
+D:\Projektit\C# Projektit\Alytalo\obj\Debug\Alytalo.g.resources
+D:\Projektit\C# Projektit\Alytalo\obj\Debug\Alytalo.Properties.Resources.resources
+D:\Projektit\C# Projektit\Alytalo\obj\Debug\Alytalo.csproj.GenerateResource.cache
+D:\Projektit\C# Projektit\Alytalo\obj\Debug\Alytalo.csproj.CoreCompileInputs.cache
+D:\Projektit\C# Projektit\Alytalo\obj\Debug\Alytalo.exe
+D:\Projektit\C# Projektit\Alytalo\obj\Debug\Alytalo.pdb

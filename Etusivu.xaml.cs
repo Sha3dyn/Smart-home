@@ -17,7 +17,6 @@ namespace Alytalo
 {
     /// <summary>
     /// Interaction logic for Etusivu.xaml
-    /// Valaistus jos jossain valot > switched = true > näytä, missä huoneessa valot. Nappi jolla sammuttaa / käynnistää kaikki valot 100% dimmer
     /// Korjaa bugi: jos vaihdetaan lämpötilaa ja hypätään muulle kuin etusivulle, päivitys ei siirry etusivulle ollenkaan!
     /// </summary>
     
@@ -32,7 +31,8 @@ namespace Alytalo
         // Set current states 
         private void SetState()
         {
-            if(Valaistus.SwitchedLivingroom || Valaistus.SwitchedKitchen)
+
+            if(Lights.LivingroomLightsOn || Lights.KitchenLightsOn)
             {
                 SwitchedOnOrOff(imgLightsOn, imgLightsOff);
                 lblLightsState.Content = "Valaistus päällä";
@@ -44,18 +44,19 @@ namespace Alytalo
                 lblLightsState.Content = "Kaikki valot sammutettu";
             }
             
-            if(Sauna.SaunaSwitched)
+            
+            if(SaunaClass.SaunaSwitched)
             {
                 SwitchedOnOrOff(imgSaunaOn, imgSaunaOff);
-                lblSaunaState.Content = Sauna.SaunaState;
+                lblSaunaState.Content = SaunaClass.SaunaState;
             }
             else
             {
                 SwitchedOnOrOff(imgSaunaOff, imgSaunaOn);
 
-                if(Sauna.SaunaStateChanged)
+                if(SaunaClass.SaunaStateChanged)
                 {
-                    lblSaunaState.Content = Sauna.SaunaState;
+                    lblSaunaState.Content = SaunaClass.SaunaState;
                 }
                 else
                 {
@@ -63,26 +64,19 @@ namespace Alytalo
                 }
             }
 
-            if(!lampotila.ValueChanged) 
-            {
-                txtLampotila.Text = "19";
-            }
-            else
-            {
-                txtLampotila.Text = lampotila.Temperature.ToString();
-            }
+            Thermostat.SetTemperature(txtLampotila, false);
         }
 
         private void PrintLightedRooms()
         {
-            if(Valaistus.SwitchedKitchen)
+            if(Lights.KitchenLightsOn)
             {
-                lblKitchenState.Content = "Keittiö " + Valaistus.DimmerKitchen + "%";
+                lblKitchenState.Content = "Keittiö " + Lights.DimmerKitchen + "%";
             }
 
-            if(Valaistus.SwitchedLivingroom)
+            if(Lights.LivingroomLightsOn)
             {
-                lblLivingroomState.Content = "Olohuone " + Valaistus.DimmerLivingroom + "%";
+                lblLivingroomState.Content = "Olohuone " + Lights.DimmerLivingroom + "%";
             }
         }
 
