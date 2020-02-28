@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Speech.Synthesis;
 
 namespace Alytalo
 {
@@ -23,6 +24,7 @@ namespace Alytalo
     
     public partial class MainWindow : Window
     {
+        SpeechSynthesizer talk = new SpeechSynthesizer();
         Etusivu etusivu;
         lampotila lampo;
         Sauna sauna;
@@ -92,5 +94,50 @@ namespace Alytalo
             frame.Content = sauna;
         }
 
+        private string TellStates()
+        {
+            string lightsSwitched;
+            string saunaSwitched;
+            string temp;
+
+            if(Lights.KitchenLightsOn || Lights.LivingroomLightsOn)
+            {
+                lightsSwitched = " on";
+            }
+            else
+            {
+                lightsSwitched = " off";
+            }
+
+            if(SaunaClass.SaunaSwitched)
+            {
+                saunaSwitched = " on";
+            }
+            else
+            {
+                saunaSwitched = " off";
+            }
+
+            if(Thermostat.Temperature == 0)
+            {
+                temp = "19";
+            }
+            else
+            {
+                temp = Thermostat.Temperature.ToString();
+            }
+
+            string lights = "Lights are " + lightsSwitched;
+            string roomtemp = "Room temperature is " + temp;
+            string saunaspeak = "Sauna is " + saunaSwitched;
+
+            return lights + " " + roomtemp + "  " + saunaspeak;
+        }
+
+        private void BtnSpeech_Click(object sender, RoutedEventArgs e)
+        {
+            string test = TellStates();
+            talk.Speak(test);
+        }
     }
 }

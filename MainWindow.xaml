@@ -19,6 +19,7 @@
             <Button x:Name="btnValaistus" Content="Valaistus" Margin="0,189,0,0" VerticalAlignment="Top" Height="35" Background="{x:Null}" FontSize="20" FontFamily="Candara" Foreground="White" BorderBrush="{x:Null}" HorizontalAlignment="Left" Width="159" Click="BtnValaistus_Click"/>
             <Button x:Name="btnLampotila" Content="Lämpötila" Margin="0,224,0,0" VerticalAlignment="Top" Height="35" Background="{x:Null}" FontSize="20" FontFamily="Candara" Foreground="White" BorderBrush="{x:Null}" HorizontalAlignment="Left" Width="159" Click="BtnLampotila_Click"/>
             <Button x:Name="btnSauna" Content="Sauna" Margin="0,259,0,0" VerticalAlignment="Top" Height="35" Background="{x:Null}" FontSize="20" FontFamily="Candara" Foreground="White" BorderBrush="{x:Null}" HorizontalAlignment="Left" Width="159" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="BtnSauna_Click"/>
+            <Image x:Name="image" HorizontalAlignment="Left" Height="100" Margin="30,34,0,0" VerticalAlignment="Top" Width="100" Source="assets/login.png"/>
         </Grid>
         <Grid x:Name="brdrTop" MouseLeftButtonDown="BrdrTop_MouseLeftButtonDown" Height="36" VerticalAlignment="Top">
             <Grid.Background>
@@ -28,6 +29,10 @@
                 </LinearGradientBrush>
             </Grid.Background>
             <Button x:Name="btnExit" Content="X" FontSize="22" Background="{x:Null}" Foreground="White" FontWeight="Bold" BorderBrush="{x:Null}" Click="BtnExit_Click" Margin="737,0,0,0"/>
+            <Button x:Name="btnSpeech" HorizontalAlignment="Left" Margin="688,0,0,0" VerticalAlignment="Top" Width="44" Height="36" RenderTransformOrigin="0.423,0.495" Click="BtnSpeech_Click" Background="{x:Null}" BorderBrush="{x:Null}">
+                <Image x:Name="imgSpeech" Height="36" VerticalAlignment="Top" Width="37" HorizontalAlignment="Left" Source="assets/chat.png" RenderTransformOrigin="-1.882,0.529"/>
+            </Button>
+            <Label x:Name="label" Content="Smart Homes Inc" HorizontalAlignment="Left" Margin="284,0,0,0" VerticalAlignment="Top" Width="237" Height="36" FontFamily="Sneakerhead BTN Shadow" FontSize="22" Foreground="White"/>
         </Grid>
         <Frame x:Name="frame" Content="" HorizontalAlignment="Left" Height="406" Margin="159,36,0,0" VerticalAlignment="Top" Width="633" Background="White"/>
 
