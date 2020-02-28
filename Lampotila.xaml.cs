@@ -34,8 +34,12 @@ namespace Alytalo
             txtCurrentTemp.Text = txtSetTemp.Text;
             Thermostat.Temperature = Int32.Parse(txtCurrentTemp.Text);
             txtSetTemp.Clear();
-            Thermostat.ValueChanged = true;
         }
 
+        private void TxtCurrentTemp_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            Thermostat.ChangedTemperature = Int32.Parse(txtCurrentTemp.Text);
+            Thermostat.ValueChanged = true;
+        }
     }
 }

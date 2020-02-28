@@ -24,7 +24,7 @@
             </StackPanel>
         </Grid>
         <Grid x:Name="gridCurrentTemp" HorizontalAlignment="Left" Height="197" Margin="291,52,0,0" VerticalAlignment="Top" Width="176" Background="#FF142055">
-            <TextBox x:Name="txtCurrentTemp" HorizontalAlignment="Center" Height="130" Margin="10,49,10,18" TextWrapping="Wrap" VerticalAlignment="Center" Width="156" FontSize="72" TextAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White"/>
+            <TextBox x:Name="txtCurrentTemp" HorizontalAlignment="Center" Height="130" Margin="10,49,10,18" TextWrapping="Wrap" VerticalAlignment="Center" Width="156" FontSize="72" TextAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" TextChanged="TxtCurrentTemp_TextChanged"/>
             <StackPanel x:Name="panelTavoitelampotila" Height="31" VerticalAlignment="Top">
                 <StackPanel.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">

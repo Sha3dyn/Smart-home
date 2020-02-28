@@ -11,6 +11,7 @@ namespace Alytalo
     {
         public static int Temperature { get; set; }
         public static bool ValueChanged { get; set; }
+        public static int ChangedTemperature { get; set; }
 
         public static void SetTemperature(TextBox text, bool changed)
         {
@@ -22,6 +23,5 @@ namespace Alytalo
             ValueChanged = changed;
             text.Text = Temperature.ToString();
         }
-
     }
 }

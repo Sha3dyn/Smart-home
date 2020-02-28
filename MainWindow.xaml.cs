@@ -18,7 +18,6 @@ namespace Alytalo
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// Lisää nappi, jota painamalla ohjelma kertoo ääneen tilan
-    /// Korjaa bugi, jossa lataa muutetun lämpötilan vain ensimmäiseksi avatulle sivulle
     /// Tallenna lokiin
     /// </summary>
     
@@ -53,7 +52,8 @@ namespace Alytalo
         private void BtnEtusivu_Click(object sender, RoutedEventArgs e)
         {
             // Update etusivu if values are changed
-            if(etusivu == null || SaunaClass.SaunaStateChanged || Thermostat.ValueChanged || Lights.LightingStateChanged) 
+            if(etusivu == null || SaunaClass.SaunaStateChanged || Thermostat.ValueChanged || Lights.LightingStateChanged
+                || etusivu.txtLampotila.Text != Thermostat.ChangedTemperature.ToString()) 
             {
                 etusivu = new Etusivu();
             }

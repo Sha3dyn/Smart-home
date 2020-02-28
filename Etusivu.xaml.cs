@@ -64,7 +64,15 @@ namespace Alytalo
                 }
             }
 
-            Thermostat.SetTemperature(txtLampotila, false);
+            if (Thermostat.ChangedTemperature.ToString() != txtLampotila.Text)
+            {
+                txtLampotila.Text = Thermostat.Temperature.ToString();
+
+                if(txtLampotila.Text == "0" && !Thermostat.ValueChanged)
+                {
+                    txtLampotila.Text = "19";
+                }
+            }
         }
 
         private void PrintLightedRooms()
