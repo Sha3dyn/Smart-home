@@ -17,8 +17,6 @@ namespace Alytalo
 {
     /// <summary>
     /// Interaction logic for Valaistus.xaml
-    /// *Switched ja dimmer muuttujat ja niiden tallennus johonkin
-    /// *tietojen tallennus
     /// </summary>
  
     public partial class Valaistus : Page

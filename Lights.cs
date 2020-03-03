@@ -11,7 +11,6 @@ namespace Alytalo
     class Lights
     {
         public static bool Switched { get; set; }
-        public string Dimmer { get; set; }
         public bool LightingState { get; set; }
         public static bool LightingStateChanged { get; set; }
         public static bool KitchenLightsOn { get; set; }

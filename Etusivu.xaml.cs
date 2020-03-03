@@ -17,7 +17,6 @@ namespace Alytalo
 {
     /// <summary>
     /// Interaction logic for Etusivu.xaml
-    /// Korjaa bugi: jos vaihdetaan lämpötilaa ja hypätään muulle kuin etusivulle, päivitys ei siirry etusivulle ollenkaan!
     /// </summary>
     
     public partial class Etusivu : Page
