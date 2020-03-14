@@ -18,7 +18,6 @@ namespace Alytalo
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
-    /// Lisää nappi, jota painamalla ohjelma kertoo ääneen tilan
     /// Tallenna lokiin
     /// </summary>
     

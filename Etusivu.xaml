@@ -9,7 +9,7 @@
       Title="Etusivu">
 
     <Grid>
-        <Grid x:Name="gridValaistus" HorizontalAlignment="Left" Height="100" Margin="44,28,0,0" VerticalAlignment="Top" Width="397">
+        <Grid x:Name="gridValaistus" HorizontalAlignment="Left" Height="100" Margin="26,28,0,0" VerticalAlignment="Top" Width="397">
             <Grid.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF000E11" Offset="0"/>
@@ -32,7 +32,7 @@
                 <Label x:Name="lblValaistusOtsikko" Content="Valaistus" HorizontalAlignment="Center" VerticalAlignment="Center" Height="31" Margin="101,0,109,0" FontSize="16" FontWeight="Bold" Foreground="White" Width="87"/>
             </StackPanel>
         </Grid>
-        <Grid x:Name="gridLampotila" HorizontalAlignment="Left" Height="100" Margin="44,148,0,0" VerticalAlignment="Top" Width="397">
+        <Grid x:Name="gridLampotila" HorizontalAlignment="Left" Height="100" Margin="26,148,0,0" VerticalAlignment="Top" Width="397">
             <Grid.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF000E11" Offset="0"/>
@@ -53,7 +53,7 @@
                 <Label x:Name="lblLampotilaOtsikko" Content="Lämpötila" HorizontalAlignment="Center" VerticalAlignment="Center" Height="31" Margin="101,0,109,0" FontSize="16" FontWeight="Bold" Foreground="White" Width="87"/>
             </StackPanel>
         </Grid>
-        <Grid x:Name="gridSauna" HorizontalAlignment="Left" Height="100" Margin="44,268,0,0" VerticalAlignment="Top" Width="397">
+        <Grid x:Name="gridSauna" HorizontalAlignment="Left" Height="100" Margin="26,268,0,0" VerticalAlignment="Top" Width="397">
             <Grid.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF000E11"/>
@@ -83,10 +83,11 @@
                 <Label x:Name="lblSaunaOtsikko" Content="Sauna" HorizontalAlignment="Center" VerticalAlignment="Center" Height="31" Margin="115,0,109,0" FontSize="16" FontWeight="Bold" Foreground="White" Width="73"/>
             </StackPanel>
         </Grid>
-        <StackPanel HorizontalAlignment="Left" Height="69" Margin="297,59,0,0" VerticalAlignment="Top" Width="144" Background="#FF142055">
+        <StackPanel HorizontalAlignment="Left" Height="69" Margin="279,59,0,0" VerticalAlignment="Top" Width="144" Background="#FF142055">
             <Label x:Name="lblLivingroomState" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="144" Height="27" Foreground="White"/>
             <Label x:Name="lblKitchenState" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="144" Foreground="White"/>
         </StackPanel>
+        <DataGrid x:Name="dgChanges" Height="340" Margin="428,28,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="180"/>
 
     </Grid>
 </Page>

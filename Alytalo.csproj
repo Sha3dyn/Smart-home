@@ -56,6 +56,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Changelog.cs" />
     <Compile Include="Lampotila.xaml.cs">
       <DependentUpon>Lampotila.xaml</DependentUpon>
     </Compile>
@@ -64,6 +65,7 @@
       <DependentUpon>Sauna.xaml</DependentUpon>
     </Compile>
     <Compile Include="SaunaClass.cs" />
+    <Compile Include="State.cs" />
     <Compile Include="Thermostat.cs" />
     <Compile Include="Valaistus.xaml.cs">
       <DependentUpon>Valaistus.xaml</DependentUpon>

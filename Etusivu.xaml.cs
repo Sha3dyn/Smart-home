@@ -25,6 +25,7 @@ namespace Alytalo
         {
             InitializeComponent();
             SetState();
+            SetDataGridFields();
         }
 
         // Set current states 
@@ -72,6 +73,22 @@ namespace Alytalo
                     txtLampotila.Text = "19";
                 }
             }
+
+            if(Changelog.States == null)
+            {
+                State state = new State();
+                Changelog.States = new List<State>();
+                state.Time = DateTime.Now.ToShortTimeString();
+                state.Lights = "Kaikki valot sammutettu";
+                state.Temp = "19";
+                state.SaunaStove = "Sammuksissa";
+                Changelog.States.Add(state);
+                PrintGridStates();
+            }
+            else
+            {
+                SaveState();
+            }
         }
 
         private void PrintLightedRooms()
@@ -93,5 +110,50 @@ namespace Alytalo
             imgVisible.Visibility = Visibility.Visible;
             imgCollapsed.Visibility = Visibility.Collapsed;
         }
+
+        // Save data changes to datagrid
+        private void SaveState()
+        {
+            State state = new State();
+            state.Time = DateTime.Now.ToShortTimeString();
+            state.Lights = lblLightsState.Content.ToString();
+            state.Temp = txtLampotila.Text;
+            state.SaunaStove = lblSaunaState.Content.ToString();
+            Changelog.States.Add(state);
+            PrintGridStates();
+        }
+
+        private void PrintGridStates()
+        {
+            foreach(State state in Changelog.States)
+            {
+                dgChanges.Items.Add(state);
+            }
+        }
+
+        // Set datagrid fields at start
+        private void SetDataGridFields()
+        {
+            DataGridTextColumn columnAika = new DataGridTextColumn();
+            DataGridTextColumn columnValaistus = new DataGridTextColumn();
+            DataGridTextColumn columnHuonelampotila = new DataGridTextColumn();
+            DataGridTextColumn columnSauna = new DataGridTextColumn();
+
+            columnAika.Binding = new Binding("Time");
+            columnValaistus.Binding = new Binding("Lights"); 
+            columnHuonelampotila.Binding = new Binding("Temp");
+            columnSauna.Binding = new Binding("SaunaStove");
+
+            columnAika.Header = "Aika";
+            columnValaistus.Header = "Valaistus";
+            columnHuonelampotila.Header = "Lämpötila";
+            columnSauna.Header = "Sauna";
+
+            dgChanges.Columns.Add(columnAika);
+            dgChanges.Columns.Add(columnValaistus);
+            dgChanges.Columns.Add(columnHuonelampotila);
+            dgChanges.Columns.Add(columnSauna);
+        }
+
     }
 }

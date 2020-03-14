@@ -31,7 +31,7 @@ namespace Alytalo
             SaunaSwitched = true;
             SaunaStateChanged = true;
             HeatingTimer.Tick += HeatingTimer_Tick;
-            HeatingTimer.Interval = TimeSpan.FromMilliseconds(500);
+            HeatingTimer.Interval = TimeSpan.FromMilliseconds(1000);
             HeatingTimer.Start();
         }
 
@@ -51,7 +51,7 @@ namespace Alytalo
             SaunaSwitched = false;
             SaunaStateChanged = true;
             CoolingTimer.Tick += CoolingTimer_Tick;
-            CoolingTimer.Interval = TimeSpan.FromMilliseconds(500);
+            CoolingTimer.Interval = TimeSpan.FromMilliseconds(1000);
             CoolingTimer.Start();
         }
 
